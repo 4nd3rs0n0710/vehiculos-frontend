@@ -38,7 +38,7 @@ function LoginForm() {
       <div
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(135deg, rgba(64,206,228,0.4) 0%, rgba(198,0,126,0.3) 100%)',
+          background: 'rgba(200, 220, 240, 0.45)',
         }}
       />
 
@@ -57,7 +57,7 @@ function LoginForm() {
       {/* Card de login */}
       <motion.div
         className="relative z-10 bg-[#FCFCFC] rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.10)] w-full mx-4 flex flex-col justify-between"
-        style={{ maxWidth: '560px', padding: '63px 40px', minHeight: '750px' }}
+        style={{ maxWidth: '560px', padding: '63px 40px', minHeight: '730px' }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
@@ -179,7 +179,7 @@ function LoginForm() {
 
         {/* Links secundarios */}
         <div className="mt-12 flex justify-center gap-40 text-[14px] font-semibold">
-          <a href="#" className="text-[#D10087] hover:opacity-80 transition-opacity">
+          <a href="/recovery" className="text-[#D10087] hover:opacity-80 transition-opacity">
             Olvidé <span className="font-bold">Mi</span> contraseña
           </a>
           <a href="#" className="text-[#D10087] hover:opacity-80 transition-opacity font-bold">
