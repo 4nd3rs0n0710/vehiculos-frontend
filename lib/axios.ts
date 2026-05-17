@@ -41,7 +41,7 @@ api.interceptors.response.use(
         const original = error.config
 
     // Solo intenta renovar si es un 401 y no es un reintento
-    if (error.response?.status === 401 && !original._retry) {
+    if (error.response?.status === 401 && !original._retry && !original.url?.includes('/auth/login/')) {
         original._retry = true
         const refresh = getRefreshToken()
 

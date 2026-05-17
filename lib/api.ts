@@ -20,13 +20,13 @@ export const login = async (
 
 /** Retorna la lista completa de vehículos */
 export const getVehicles = async (): Promise<Vehicle[]> => {
-    const { data } = await api.get('/vehiculos/')
+    const { data } = await api.get('/vehicles/')
     return data
 }
 
 /** Crea un nuevo vehículo y retorna el objeto creado */
 export const createVehicle = async (payload: VehicleFormData): Promise<Vehicle> => {
-    const { data } = await api.post('/vehiculos/', payload)
+    const { data } = await api.post('/vehicles/', payload)
     return data
 }
 
@@ -35,11 +35,11 @@ export const updateVehicle = async (
     id: number,
     payload: VehicleFormData
 ): Promise<Vehicle> => {
-    const { data } = await api.patch(`/vehiculos/${id}/`, payload)
+    const { data } = await api.patch(`/vehicles/${id}/`, payload)
     return data
 }
 
 /** Elimina un vehículo por ID */
 export const deleteVehicle = async (id: number): Promise<void> => {
-    await api.delete(`/vehiculos/${id}/`)
+    await api.delete(`/vehicles/${id}/`)
 }
