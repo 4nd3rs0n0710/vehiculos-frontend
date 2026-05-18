@@ -182,7 +182,7 @@ function LoginForm() {
           <a href="/recovery" className="text-[#D10087] hover:opacity-80 transition-opacity">
             Olvidé <span className="font-bold">Mi</span> contraseña
           </a>
-          <a href="#" className="text-[#D10087] hover:opacity-80 transition-opacity font-bold">
+          <a href="/signup" className="text-[#D10087] hover:opacity-80 transition-opacity font-bold">
             Registrarse
           </a>
         </div>

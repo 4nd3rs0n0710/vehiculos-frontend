@@ -93,7 +93,7 @@ function RecoveryForm() {
             transition={{ duration: 0.5, ease: 'easeOut' }}
         >
         {/* Logo + separador + Manager */}
-        <div className="flex items-center justify-center gap-4 mb-10">
+        <div className="flex items-center justify-center gap-4 mb-16">
             <Image
                 src="/Imagologo_motion.svg"
                 alt="Motion Logo"
@@ -137,7 +137,7 @@ function RecoveryForm() {
                 type="email"
                 value={email}
                 onChange={e => setEmail(e.target.value)}
-                placeholder="correo@ejemplo.com"
+                placeholder="demo@gmail.com"
                 required
                 maxLength={RECOVERY_CONSTRAINTS.MAX_EMAIL_LENGTH}
                 style={{ fontFamily: 'var(--font-montserrat)', lineHeight: '48px', boxSizing: 'border-box' }}
@@ -174,7 +174,7 @@ function RecoveryForm() {
         </form>
 
         {/* Botón volver */}
-        <div className="mt-auto pb-4 flex justify-start">
+        <div className="flex justify-start items-center gap-4 mt-20">
             <motion.button
                 onClick={() => router.push('/login')}
                 style={{ marginLeft: '24px', boxShadow: '0 8px 20px rgba(0,0,0,0.25)' }}
