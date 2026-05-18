@@ -16,7 +16,7 @@ const PROTECTED_ROUTES = ['/dashboard', '/home']
 /** Rutas que no deben ser accesibles con sesión activa */
 const AUTH_ROUTES = ['/login']
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
     const token = request.cookies.get('access_token')?.value
     const { pathname } = request.nextUrl
 
@@ -40,5 +40,5 @@ export function middleware(request: NextRequest) {
     }
 
     export const config = {
-    matcher: ['/dashboard/:path*', '/home/:path*', '/login',  '/reset-password'],
+        matcher: ['/dashboard/:path*', '/home/:path*', '/login',  '/reset-password'],
 }

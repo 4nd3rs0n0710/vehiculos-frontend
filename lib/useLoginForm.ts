@@ -95,7 +95,7 @@ export function useLoginForm(expired: string | null): UseLoginFormReturn {
     try {
         const tokens = await login(username, password)
         saveTokens(tokens)
-        router.push('/dashboard')
+        router.push('/home')
     } catch {
         setError(LOGIN_MESSAGES.INVALID_CREDENTIALS)
         setUsername('')

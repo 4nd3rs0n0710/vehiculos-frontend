@@ -1,11 +1,7 @@
-/**
- * Layout raíz de la aplicación.
- * Carga la fuente Montserrat desde Google Fonts
- * y la aplica a toda la app via variable CSS.
- */
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 import './globals.css'
+import PageTransition from '@/components/PageTransition'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -26,7 +22,9 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={`${montserrat.variable} ${montserrat.className}`}>
-        {children}
+        <PageTransition>
+          {children}
+        </PageTransition>
       </body>
     </html>
   )

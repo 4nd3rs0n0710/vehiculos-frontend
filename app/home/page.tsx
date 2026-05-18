@@ -2,8 +2,10 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 
 export default function HomePage() {
+  const router = useRouter()
   return (
     <main className="min-h-screen bg-white flex flex-col relative overflow-hidden">
 
@@ -25,7 +27,8 @@ export default function HomePage() {
           repeatDelay: 0
         }}
       />
-      <header className="absolute top-13 left-15 z-30">
+      <header className="absolute top-13 left-15 z-30 cursor-pointer"
+          onClick={() => router.push('/dashboard')}>
         <Image src="/Imagologo_motion.svg"
           alt="Motion Logo" 
           width={55} 
@@ -59,8 +62,9 @@ export default function HomePage() {
 
         {/* Teléfono — capa del medio */}
         <motion.div
-          className="absolute z-20"
+          className="absolute z-20 cursor-pointer"
           style={{ marginTop: '80px' }}
+          onClick={() => router.push('/dashboard')}
           initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0 }}
