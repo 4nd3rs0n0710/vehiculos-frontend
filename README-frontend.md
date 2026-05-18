@@ -151,4 +151,4 @@ El proyecto sigue principios de **Clean Architecture** y **SOLID**:
 
 El frontend está desplegado en **Vercel**.
 
-🔗 URL de producción: `<url-vercel>`
+🔗 URL de producción: 'https://vehiculos-frontend-theta.vercel.app'
